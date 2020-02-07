@@ -14,12 +14,14 @@ dependencies:
     - nbformat
     - nb_conda
     - jupytext
+    - nbpresent
     - papermill
     - nbconvert
     - ipywidgets
     - jupyterlab
     - ipyparallel
     - nodejs>=13.8
+    - nb_anacondacloud
     - jedi<0.16,>=0.14.1
     - pip:
         - jupyter-lsp
