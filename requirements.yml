@@ -1,21 +1,22 @@
 name: ide
 channels:
-  - defaults
-  - conda-forge
+    - defaults
+    - conda-forge
 dependencies:
-  - black
-  - ipyparallel
-  - ipywidgets
-  - jupyterlab
-  - jupyterlab_code_formatter
-  - jupytext
-  - nb_conda
-  - papermill
-  - pip
-  - python-language-server
-  - rise
-  - voila
-  - pip:
-    - jupyter-lsp
-
-# jupyter serverextension enable --py jupyterlab_code_formatter
+    - pip
+    - rise
+    - voila
+    - black
+    - nodejs
+    - nbdime
+    - nb_conda
+    - jupytext
+    - papermill
+    - ipywidgets
+    - jupyterlab
+    - ipyparallel
+    - pip:
+        - jupyter-lsp
+        - jupyterlab-quickopen
+        - jupyterlab_code_formatter
+        - python-language-server

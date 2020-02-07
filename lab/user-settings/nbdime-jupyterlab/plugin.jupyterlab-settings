@@ -1,0 +1,10 @@
+{
+    // Nbdime
+    // nbdime-jupyterlab:plugin
+    // Settings for the nbdime extension.
+    // **********************************
+
+    // Hide Unchanged Cells
+    // Whether unchanged cells should be hidden by default.
+    "hideUnchanged": true
+}
