@@ -67,6 +67,162 @@
     // apputils:decr-font-size
     // statusbar:toggle
     // rendermime:handle-local-link
+    // application:activate-next-tab
+    // application:activate-previous-tab
+    // application:close
+    // application:close-all
+    // application:close-other-tabs
+    // application:close-right-tabs
+    // application:toggle-left-area
+    // application:toggle-right-area
+    // application:toggle-presentation-mode
+    // application:set-mode
+    // application:toggle-mode
+    // router:tree
+    // apputils:load-statedb
+    // apputils:reset
+    // apputils:reset-on-load
+    // markdownviewer:open
+    // settingeditor:open
+    // settingeditor:revert
+    // settingeditor:save
+    // variableinspector:open
+    // filebrowser:delete
+    // filebrowser:copy
+    // filebrowser:cut
+    // filebrowser:download
+    // filebrowser:duplicate
+    // filebrowser:hide-main
+    // filebrowser:go-to-path
+    // filebrowser:open-path
+    // filebrowser:open
+    // filebrowser:open-browser-tab
+    // filebrowser:copy-download-link
+    // filebrowser:paste
+    // filebrowser:create-new-directory
+    // filebrowser:rename
+    // filebrowser:copy-path
+    // filebrowser:activate
+    // filebrowser:shutdown
+    // filebrowser:toggle-main
+    // filebrowser:create-main-launcher
+    // filebrowser:toggle-navigate-to-current-directory
+    // filebrowser:share-main
+    // inspector:open
+    // htmlviewer:trust-html
+    // imageviewer:zoom-in
+    // imageviewer:zoom-out
+    // imageviewer:reset-image
+    // imageviewer:rotate-clockwise
+    // imageviewer:rotate-counterclockwise
+    // imageviewer:flip-horizontal
+    // imageviewer:flip-vertical
+    // imageviewer:invert-colors
+    // terminal:create-new
+    // terminal:open
+    // terminal:refresh
+    // terminal:increase-font
+    // terminal:decrease-font
+    // terminal:set-theme
+    // shortcutui:open-ui
+    // notebook:run-cell-and-select-next
+    // notebook:run-cell
+    // notebook:run-cell-and-insert-below
+    // notebook:run-in-console
+    // notebook:run-all-cells
+    // notebook:run-all-above
+    // notebook:run-all-below
+    // notebook:render-all-markdown
+    // notebook:restart-kernel
+    // notebook:close-and-shutdown
+    // notebook:trust
+    // notebook:export-to-format
+    // notebook:restart-clear-output
+    // notebook:restart-run-all
+    // notebook:clear-all-cell-outputs
+    // notebook:clear-cell-output
+    // notebook:interrupt-kernel
+    // notebook:change-cell-to-code
+    // notebook:change-cell-to-markdown
+    // notebook:change-cell-to-raw
+    // notebook:cut-cell
+    // notebook:copy-cell
+    // notebook:paste-cell-below
+    // notebook:paste-cell-above
+    // notebook:paste-and-replace-cell
+    // notebook:delete-cell
+    // notebook:split-cell-at-cursor
+    // notebook:merge-cells
+    // notebook:insert-cell-above
+    // notebook:insert-cell-below
+    // notebook:move-cursor-up
+    // notebook:move-cursor-down
+    // notebook:extend-marked-cells-above
+    // notebook:extend-marked-cells-top
+    // notebook:extend-marked-cells-below
+    // notebook:extend-marked-cells-bottom
+    // notebook:select-all
+    // notebook:deselect-all
+    // notebook:move-cell-up
+    // notebook:move-cell-down
+    // notebook:toggle-all-cell-line-numbers
+    // notebook:toggle-record-timing
+    // notebook:enter-command-mode
+    // notebook:enter-edit-mode
+    // notebook:undo-cell-action
+    // notebook:redo-cell-action
+    // notebook:change-kernel
+    // notebook:reconnect-to-kernel
+    // notebook:create-output-view
+    // notebook:create-console
+    // notebook:change-cell-to-heading-1
+    // notebook:change-cell-to-heading-2
+    // notebook:change-cell-to-heading-3
+    // notebook:change-cell-to-heading-4
+    // notebook:change-cell-to-heading-5
+    // notebook:change-cell-to-heading-6
+    // notebook:hide-cell-code
+    // notebook:show-cell-code
+    // notebook:hide-all-cell-code
+    // notebook:show-all-cell-code
+    // notebook:hide-cell-outputs
+    // notebook:show-cell-outputs
+    // notebook:hide-all-cell-outputs
+    // notebook:show-all-cell-outputs
+    // notebook:enable-output-scrolling
+    // notebook:disable-output-scrolling
+    // notebook:create-new
+    // completer:invoke-notebook
+    // completer:select-notebook
+    // logconsole:open
+    // logconsole:add-checkpoint
+    // logconsole:clear
+    // logconsole:set-level
+    // tooltip:launch-notebook
+    // Collapsible_Headings:Toggle_Collapse
+    // Collapsible_Headings:Manually_Update_Collapse_Buttons
+    // Collapsible_Headings:Manually_Update_Notebook_Collapse_State
+    // Collapsible_Headings:Collapse_All
+    // Collapsible_Headings:UnCollapse_All
+    // Collapsible_Headings:Add_Header_Above
+    // Collapsible_Headings:Add_Header_Below
+    // Collapsible_Headings:Uncollapse_Header
+    // Collapsible_Headings:Collapse_Header
+    // Collapsible_Headings:HandleUp
+    // Collapsible_Headings:HandleDown
+    // jupytext:ipynb
+    // jupytext:auto:light
+    // jupytext:auto:percent
+    // jupytext:auto:hydrogen
+    // jupytext:md
+    // jupytext:Rmd
+    // jupytext:custom
+    // jupytext:none
+    // jupytext_metadata
+    // help:about
+    // help:open
+    // help:launch-classic-notebook
+    // @jupyter-widgets/jupyterlab-manager:saveWidgetState
     // 
     // Note: To disable a system default shortcut,
     // copy it to User Preferences and add the
@@ -847,6 +1003,15 @@
                 ""
             ],
             "selector": ".jp-Notebook.jp-mod-commandMode"
-        }
+        },
+        {
+            "command": "quickopen:activate",
+            "keys": [
+                "Ctrl ;"
+            ],
+            "selector": "body",
+            "title": "Activate Quick Open",
+            "category": "Main Area"
+    }
     ]
 }

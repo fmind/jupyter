@@ -5,18 +5,22 @@ channels:
 dependencies:
     - pip
     - rise
+    - nbval
     - voila
     - black
-    - nodejs
     - nbdime
+    - nbformat
     - nb_conda
     - jupytext
     - papermill
+    - nbconvert
     - ipywidgets
     - jupyterlab
     - ipyparallel
+    - nodejs>=13.8
     - pip:
         - jupyter-lsp
+        - jupyterlab-git
         - jupyterlab-quickopen
         - jupyterlab_code_formatter
         - python-language-server
