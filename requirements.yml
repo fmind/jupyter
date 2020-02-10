@@ -14,7 +14,6 @@ dependencies:
     - nbformat
     - nb_conda
     - jupytext
-    - nbpresent
     - papermill
     - nbconvert
     - ipywidgets
