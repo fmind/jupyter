@@ -9,6 +9,7 @@ dependencies:
     - nbval
     - voila
     - black
+    - qgrid
     - pylint
     - nbdime
     - nbformat
