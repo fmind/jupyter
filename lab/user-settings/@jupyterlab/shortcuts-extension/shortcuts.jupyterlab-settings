@@ -276,14 +276,14 @@
         {
             "command": "application:toggle-presentation-mode",
             "keys": [
-                ""
+                "Accel Shift P"
             ],
             "selector": "body"
         },
         {
             "command": "application:toggle-right-area",
             "keys": [
-                ""
+                "Accel Shift |"
             ],
             "selector": "body"
         },
@@ -437,7 +437,7 @@
         {
             "command": "editmenu:clear-all",
             "keys": [
-                ""
+                "Accel Shift O"
             ],
             "selector": "[data-jp-undoer]"
         },
@@ -556,7 +556,7 @@
         {
             "command": "inspector:open",
             "keys": [
-                "Accel I"
+                "Accel Shift I"
             ],
             "selector": "body"
         },
@@ -579,21 +579,23 @@
         {
             "command": "kernelmenu:restart-and-clear",
             "keys": [
-                ""
+                "0",
+                "-"
             ],
             "selector": "[data-jp-kernel-user]:focus"
         },
         {
             "command": "kernelmenu:shutdown",
             "keys": [
-                ""
+                "0",
+                "="
             ],
             "selector": "[data-jp-kernel-user]:focus"
         },
         {
             "command": "launcher:create",
             "keys": [
-                ""
+                "Accel Shift M"
             ],
             "selector": "body"
         },
@@ -916,7 +918,7 @@
         {
             "command": "runmenu:restart-and-run-all",
             "keys": [
-                ""
+                "Accel Shift A"
             ],
             "selector": "[data-jp-code-runner]"
         },
@@ -930,7 +932,7 @@
         {
             "command": "runmenu:run-all",
             "keys": [
-                ""
+                "Accel Shift Y"
             ],
             "selector": "[data-jp-code-runner]"
         },
@@ -1007,7 +1009,7 @@
         {
             "command": "quickopen:activate",
             "keys": [
-                "Ctrl ;"
+                "Accel ;"
             ],
             "selector": "body",
             "title": "Activate Quick Open",
