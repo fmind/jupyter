@@ -22,6 +22,7 @@ dependencies:
     - ipyparallel
     - nodejs>=13.8
     - nb_anacondacloud
+    - nteract-scrapbook
     - jedi<0.16,>=0.14.1
     - pip:
         - jupyter-lsp
