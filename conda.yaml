@@ -5,12 +5,9 @@ channels:
 dependencies:
     - pip
     - rise
-    - rope
-    - nbval
     - voila
     - black
     - qgrid
-    - pylint
     - nbdime
     - nbformat
     - nb_conda
@@ -21,14 +18,11 @@ dependencies:
     - jupyterlab
     - ipyparallel
     - nodejs>=13.8
-    - nb_anacondacloud
     - nteract-scrapbook
     - jedi<0.16,>=0.14.1
     - pip:
         - kedro
         - nbdev
-        - jupyter-lsp
         - jupyterlab-git
         - jupyterlab-quickopen
         - jupyterlab_code_formatter
-        - python-language-server
