@@ -3,7 +3,6 @@
 import os
 
 EXTENSIONS = [
-    '@aquirdturtle/collapsible_headings',
     '@ijmbarr/jupyterlab_spellchecker',
     '@jupyter-widgets/jupyterlab-manager',
     '@jupyterlab/celltags',
