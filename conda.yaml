@@ -22,7 +22,6 @@ dependencies:
     - jedi<0.16,>=0.14.1
     - pip:
         - kedro
-        - nbdev
         - jupyterlab-git
         - jupyterlab-quickopen
         - jupyterlab_code_formatter
