@@ -3,18 +3,18 @@
 import os
 
 EXTENSIONS = [
-    '@ijmbarr/jupyterlab_spellchecker',
-    '@jupyter-widgets/jupyterlab-manager',
-    '@jupyterlab/celltags',
+    'qgrid2',
     '@jupyterlab/git',
     '@jupyterlab/toc',
-    '@lckr/jupyterlab_variableinspector',
-    '@parente/jupyterlab-quickopen',
-    '@ryantam626/jupyterlab_code_formatter',
-    'jupyterlab-jupytext',
-    'jupyterlab_filetree',
     'nbdime-jupyterlab',
-    'qgrid2',
+    'jupyterlab_filetree',
+    'jupyterlab-jupytext',
+    '@jupyterlab/celltags',
+    '@parente/jupyterlab-quickopen',
+    '@ijmbarr/jupyterlab_spellchecker',
+    '@lckr/jupyterlab_variableinspector',
+    '@jupyter-widgets/jupyterlab-manager',
+    '@ryantam626/jupyterlab_code_formatter',
 ]
 
 if __name__ == '__main__':
