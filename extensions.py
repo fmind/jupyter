@@ -12,8 +12,10 @@ EXTENSIONS = [
     '@parente/jupyterlab-quickopen',
     '@ryantam626/jupyterlab_code_formatter',
     'jupyterlab-jupytext',
+    'jupyterlab-plotly',
     'jupyterlab_filetree',
     'nbdime-jupyterlab',
+    'plotlywidget',
     'qgrid2',
 ]
 
