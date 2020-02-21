@@ -11,6 +11,7 @@ EXTENSIONS = [
     '@lckr/jupyterlab_variableinspector',
     '@parente/jupyterlab-quickopen',
     '@ryantam626/jupyterlab_code_formatter',
+    'jupyterlab-dash',
     'jupyterlab-jupytext',
     'jupyterlab-plotly',
     'jupyterlab_filetree',

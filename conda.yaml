@@ -21,7 +21,7 @@ dependencies:
     - nteract-scrapbook
     - jedi<0.16,>=0.14.1
     - pip:
-        - kedro
         - jupyterlab-git
+        - jupyterlab-dash
         - jupyterlab-quickopen
         - jupyterlab_code_formatter
