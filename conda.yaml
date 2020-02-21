@@ -14,12 +14,11 @@ dependencies:
     - jupytext
     - papermill
     - nbconvert
+    - nbstripout
     - ipywidgets
     - jupyterlab
     - ipyparallel
     - nodejs>=13.8
-    - nteract-scrapbook
-    - jedi<0.16,>=0.14.1
     - pip:
         - jupyterlab-git
         - jupyterlab-dash
