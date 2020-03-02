@@ -20,6 +20,7 @@ dependencies:
     - jupyterlab
     - ipyparallel
     - nodejs>=13.8
+    - nteract-scrapbook
     - pip:
         - jupyterlab-git
         - jupyterlab-dash

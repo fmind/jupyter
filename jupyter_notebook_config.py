@@ -264,7 +264,7 @@ c.JupyterApp.answer_yes = True
 #  platform dependent and determined by the python standard library `webbrowser`
 #  module, unless it is overridden using the --browser (NotebookApp.browser)
 #  configuration option.
-c.NotebookApp.open_browser = True
+c.NotebookApp.open_browser = False
 
 ## Hashed password to use for web authentication.
 #  
@@ -666,7 +666,7 @@ c.NotebookApp.open_browser = True
 #    indicating the root path.
 
 ## Allow access to hidden files
-c.ContentsManager.allow_hidden = False
+c.ContentsManager.allow_hidden = True
 
 ## 
 #c.ContentsManager.checkpoints = None
