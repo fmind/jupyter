@@ -3,6 +3,6 @@
 import os
 
 print(
-    'Created environment ->',
+    'Created environment: ide ->',
     os.system('conda env create -f conda.yaml --force')
 )

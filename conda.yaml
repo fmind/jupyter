@@ -8,6 +8,7 @@ dependencies:
     - voila
     - black
     - qgrid
+    - nbdev
     - nbdime
     - nbformat
     - nb_conda
