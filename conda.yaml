@@ -16,10 +16,13 @@ dependencies:
     - nbconvert
     - nbstripout
     - ipywidgets
-    - jupyterlab
     - ipyparallel
     - nodejs>=13.8
+    - jupyterlab>=2.0
+    - nteract-scrapbook
     - pip:
+        - nbdev
+        - streamlit
         - jupyterlab-git
         - jupyterlab-dash
         - jupyterlab-quickopen
