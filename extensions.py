@@ -3,18 +3,18 @@
 import os
 
 EXTENSIONS = [
-    #'@ijmbarr/jupyterlab_spellchecker',
+    '@ijmbarr/jupyterlab_spellchecker',
     '@jupyter-widgets/jupyterlab-manager',
-    #'@jupyterlab/git',
-    #'@jupyterlab/toc',
+    '@jupyterlab/git',
+    '@jupyterlab/toc',
     '@lckr/jupyterlab_variableinspector',
-    #'@parente/jupyterlab-quickopen',
-    #'@ryantam626/jupyterlab_code_formatter',
-    #'jupyterlab-dash',
+    '@parente/jupyterlab-quickopen',
+    '@ryantam626/jupyterlab_code_formatter',
+    'jupyterlab-dash',
     'jupyterlab-jupytext',
-    #'jupyterlab-plotly',
-    #'jupyterlab_filetree',
-    #'nbdime-jupyterlab',
+    'jupyterlab-plotly',
+    'jupyterlab_filetree',
+    'nbdime-jupyterlab',
     'plotlywidget',
     'qgrid2',
 ]
