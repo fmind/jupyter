@@ -3,20 +3,9 @@
 import os
 
 EXTENSIONS = [
-    '@ijmbarr/jupyterlab_spellchecker',
-    '@jupyter-widgets/jupyterlab-manager',
-    '@jupyterlab/git',
     '@jupyterlab/toc',
-    '@lckr/jupyterlab_variableinspector',
-    '@parente/jupyterlab-quickopen',
-    '@ryantam626/jupyterlab_code_formatter',
-    'jupyterlab-dash',
-    'jupyterlab-jupytext',
-    'jupyterlab-plotly',
-    'jupyterlab_filetree',
     'nbdime-jupyterlab',
-    'plotlywidget',
-    'qgrid2',
+    'jupyterlab-jupytext',
 ]
 
 if __name__ == '__main__':
