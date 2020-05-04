@@ -4,7 +4,6 @@ import os
 
 PACKAGES = [
   'pip',
-  'black',
   'nbdime',
   'nbformat',
   'jupytext',
