@@ -1,0 +1,11 @@
+{
+  "NotebookApp": {
+    "nbserver_extensions": {
+      "jupyter_lsp": true,
+      "jupyterlab_git": true,
+      "jupyterlab_quickopen": true,
+      "nbdime": true,
+      "voila": true
+    }
+  }
+}

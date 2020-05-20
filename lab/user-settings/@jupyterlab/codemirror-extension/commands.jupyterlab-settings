@@ -8,6 +8,10 @@
     // Configures the keymap to use
     "keyMap": "vim",
 
+    // Ctrl-C
+    // When enabled, which is the default, doing copy or cut when there is no selection will copy or cut the whole lines that have cursors on them.
+    "lineWiseCopyCut": true,
+
     // Scroll behavior
     // Whether to scroll past the end of text document
     "scrollPastEnd": true,

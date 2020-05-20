@@ -1,0 +1,10 @@
+{
+    // Voila Preview
+    // @jupyter-voila/jupyterlab-preview:plugin
+    // Voila Preview Extension
+    // ****************************************
+
+    // Render Preview on Save
+    // Render the voila preview automatically after saving the notebook
+    "renderOnSave": true
+}

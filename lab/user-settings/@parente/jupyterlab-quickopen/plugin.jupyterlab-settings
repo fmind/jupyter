@@ -7,8 +7,13 @@
     // Exclude Patterns
     // File and directory patterns to exclude from the list
     "excludes": [
+        ".ipynb_checkpoints",
+        ".virtual_documents",
         "node_modules",
-        "__pycache__"
+        ".mypy_cache",
+        "__pycache__",
+        "venv",
+        ".git"
     ],
 
     // Relative Search

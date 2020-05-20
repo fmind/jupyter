@@ -24,18 +24,17 @@
     // open a given file type, the override will not function.
     // 
     // Available viewers:
-    // JSON    
-    // PDF    
-    // Vega4    
-    // Vega-Lite2    
-    // Vega5    
-    // Vega-Lite3    
-    // Markdown Preview    
-    // CSVTable    
-    // TSVTable    
     // HTML Viewer    
     // Image    
+    // CSVTable    
+    // TSVTable    
+    // JSON    
+    // PDF    
+    // Vega5    
+    // Vega-Lite4    
     // Notebook    
+    // Markdown Preview    
+    // Voila-preview    
     // VDOM    
     // Editor
     // 
@@ -56,12 +55,11 @@
     // gif    
     // png    
     // bmp    
-    // PDF    
-    // vega4    
-    // vega-lite2    
-    // vega5    
-    // vega-lite3    
     // html    
+    // PDF    
+    // vega5    
+    // vega-lite4    
+    // vega-lite3    
     // vdom
     "defaultViewers": {}
 }

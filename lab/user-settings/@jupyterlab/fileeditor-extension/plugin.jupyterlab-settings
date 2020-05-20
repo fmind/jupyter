@@ -14,7 +14,7 @@
         "fontSize": null,
         "lineHeight": null,
         "lineNumbers": true,
-        "lineWrap": "off",
+        "lineWrap": "on",
         "matchBrackets": true,
         "readOnly": false,
         "insertSpaces": true,
