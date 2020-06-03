@@ -8,6 +8,7 @@ PACKAGES = [
     'nbdime',
     'jupytext',
     'jupyter-lsp',
+    'jupyter-dash',
     'jupyterlab-git',
     'jupyterlab-quickopen',
     'python-language-server[all]',
@@ -35,7 +36,7 @@ def install_extension(extension: str) -> int:
 
 
 def install_package(package: str, user: bool = False) -> int:
-    return os.system(f'python3 -m pip install {"--user" if user else ""} "{package}"')
+    return os.system(f'python -m pip install {"--user" if user else ""} "{package}"')
 
 
 if __name__ == '__main__':
