@@ -15,7 +15,9 @@ PACKAGES = [
 ]
 
 EXTENSIONS = [
+    'plotlywidget',
     '@jupyterlab/toc',
+    'jupyterlab-plotly',
     'jupyterlab-jupytext',
     '@krassowski/jupyterlab-lsp',
     '@parente/jupyterlab-quickopen',
