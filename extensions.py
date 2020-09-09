@@ -7,11 +7,8 @@ PACKAGES = [
     'voila',
     'nbdime',
     'jupytext',
-    'jupyter-lsp',
     'jupyter-dash',
     'jupyterlab-git',
-    'jupyterlab-quickopen',
-    'python-language-server[all]',
 ]
 
 EXTENSIONS = [
@@ -19,8 +16,6 @@ EXTENSIONS = [
     '@jupyterlab/toc',
     'jupyterlab-plotly',
     'jupyterlab-jupytext',
-    '@krassowski/jupyterlab-lsp',
-    '@parente/jupyterlab-quickopen',
     '@jupyter-voila/jupyterlab-preview',
     '@jupyter-widgets/jupyterlab-manager',
 ]
