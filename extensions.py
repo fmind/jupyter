@@ -4,11 +4,8 @@ import os
 import argparse
 
 PACKAGES = [
-    'voila',
-    'nbdime',
     'jupytext',
     'jupyter-dash',
-    'jupyterlab-git',
 ]
 
 EXTENSIONS = [
@@ -16,7 +13,6 @@ EXTENSIONS = [
     '@jupyterlab/toc',
     'jupyterlab-plotly',
     'jupyterlab-jupytext',
-    '@jupyter-voila/jupyterlab-preview',
     '@jupyter-widgets/jupyterlab-manager',
 ]
 
