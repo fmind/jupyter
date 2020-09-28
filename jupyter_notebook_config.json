@@ -1,9 +1,6 @@
 {
   "NotebookApp": {
     "nbserver_extensions": {
-      "jupyterlab_git": true,
-      "nbdime": true,
-      "voila": true
     }
   }
 }
