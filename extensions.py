@@ -5,15 +5,11 @@ import argparse
 
 PACKAGES = [
     'jupytext',
-    'jupyter-dash',
 ]
 
 EXTENSIONS = [
-    'plotlywidget',
     '@jupyterlab/toc',
-    'jupyterlab-plotly',
     'jupyterlab-jupytext',
-    '@jupyter-widgets/jupyterlab-manager',
 ]
 
 parser = argparse.ArgumentParser('extensions.py')
