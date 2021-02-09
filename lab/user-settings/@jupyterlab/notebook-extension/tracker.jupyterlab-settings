@@ -19,7 +19,7 @@
         "tabSize": 4,
         "wordWrapColumn": 80,
         "rulers": [],
-        "codeFolding": true,
+        "codeFolding": false,
         "lineWiseCopyCut": true
     },
 
@@ -38,34 +38,34 @@
         "fontFamily": null,
         "fontSize": null,
         "lineHeight": null,
-        "lineNumbers": true,
+        "lineNumbers": false,
         "lineWrap": "on",
-        "matchBrackets": true,
+        "matchBrackets": false,
         "readOnly": false,
         "insertSpaces": true,
         "tabSize": 4,
         "wordWrapColumn": 80,
         "rulers": [],
-        "codeFolding": true,
+        "codeFolding": false,
         "lineWiseCopyCut": true
     },
 
     // Raw Cell Configuration
     // The configuration for all raw cells.
     "rawCellConfig": {
-        "autoClosingBrackets": true,
+        "autoClosingBrackets": false,
         "fontFamily": null,
         "fontSize": null,
         "lineHeight": null,
-        "lineNumbers": true,
+        "lineNumbers": false,
         "lineWrap": "on",
-        "matchBrackets": true,
+        "matchBrackets": false,
         "readOnly": false,
         "insertSpaces": true,
         "tabSize": 4,
         "wordWrapColumn": 80,
         "rulers": [],
-        "codeFolding": true,
+        "codeFolding": false,
         "lineWiseCopyCut": true
     },
 

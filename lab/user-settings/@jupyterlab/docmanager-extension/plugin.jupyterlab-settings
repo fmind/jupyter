@@ -10,7 +10,7 @@
 
     // Autosave Interval
     // Length of save interval in seconds
-    "autosaveInterval": 60,
+    "autosaveInterval": 120,
 
     // Default Viewers
     // Overrides for the default viewers for file types.
@@ -26,6 +26,7 @@
     // Available viewers:
     // HTML Viewer    
     // Image    
+    // Image (Text)    
     // CSVTable    
     // TSVTable    
     // JSON    
@@ -34,7 +35,7 @@
     // Vega-Lite4    
     // Notebook    
     // Markdown Preview    
-    // Voila-preview    
+    // Workspace loader    
     // VDOM    
     // Editor
     // 
@@ -43,6 +44,7 @@
     // notebook    
     // directory    
     // markdown    
+    // PDF    
     // python    
     // json    
     // csv    
@@ -56,10 +58,10 @@
     // png    
     // bmp    
     // html    
-    // PDF    
     // vega5    
     // vega-lite4    
     // vega-lite3    
+    // jupyterlab-workspace    
     // vdom
     "defaultViewers": {}
 }

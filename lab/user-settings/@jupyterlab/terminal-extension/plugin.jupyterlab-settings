@@ -15,7 +15,7 @@
     // Line height
     // The line height used to render text.
     "lineHeight": 1,
-        
+
     // Treat option as meta key on macOS
     // Option key on macOS can be used as meta key. This enables to use shortcuts such as option + f to move cursor forward one word
     "macOptionIsMeta": false,
@@ -30,7 +30,7 @@
 
     // Scrollback Buffer
     // The amount of scrollback beyond initial viewport
-    "scrollback": 5000,
+    "scrollback": 1000,
 
     // Shut down on close
     // Shut down the session when closing the terminal.
@@ -38,5 +38,5 @@
 
     // Theme
     // The theme for the terminal.
-    "theme": "dark"
+    "theme": "inherit"
 }

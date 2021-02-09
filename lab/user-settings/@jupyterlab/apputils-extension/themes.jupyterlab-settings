@@ -7,8 +7,11 @@
     // Theme CSS Overrides
     // Override theme CSS variables by setting key-value pairs here
     "overrides": {
+        "code-font-family": null,
         "code-font-size": null,
+        "content-font-family": null,
         "content-font-size1": null,
+        "ui-font-family": null,
         "ui-font-size1": null
     },
 
