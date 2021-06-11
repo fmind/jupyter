@@ -119,8 +119,8 @@
 #  platform dependent and determined by the python standard library `webbrowser`
 #  module, unless it is overridden using the --browser (ServerApp.browser)
 #  configuration option.
-#  Default: True
-# c.ExtensionApp.open_browser = True
+#  Default: False
+# c.ExtensionApp.open_browser = False
 
 ## Settings that will passed to the server.
 #  Default: {}
@@ -167,6 +167,14 @@
 #  See also: JupyterApp.answer_yes
 # c.LabServerApp.answer_yes = False
 
+## The application settings directory.
+#  Default: ''
+# c.LabServerApp.app_settings_dir = ''
+
+## The url path for the application.
+#  Default: '/lab'
+# c.LabServerApp.app_url = '/lab'
+
 ## Deprecated, use `LabServerApp.blocked_extensions_uris`
 #  Default: ''
 # c.LabServerApp.blacklist_uris = ''
@@ -178,6 +186,11 @@
 #  Default: ''
 # c.LabServerApp.blocked_extensions_uris = ''
 
+## Whether to cache files on the server. This should be `True` except in dev
+#  mode.
+#  Default: True
+# c.LabServerApp.cache_files = True
+
 ## Full path of a config file.
 #  See also: JupyterApp.config_file
 # c.LabServerApp.config_file = ''
@@ -185,6 +198,10 @@
 ## Specify a config file to load.
 #  See also: JupyterApp.config_file_name
 # c.LabServerApp.config_file_name = ''
+
+## Extra paths to look for federated JupyterLab extensions
+#  Default: []
+# c.LabServerApp.extra_labextensions_path = []
 
 ## Generate default config file.
 #  See also: JupyterApp.generate_config
@@ -198,6 +215,14 @@
 #  Default: {}
 # c.LabServerApp.jinja2_options = {}
 
+## The standard paths to look in for federated JupyterLab extensions
+#  Default: []
+# c.LabServerApp.labextensions_path = []
+
+## The url for federated JupyterLab extensions
+#  Default: ''
+# c.LabServerApp.labextensions_url = ''
+
 ## The interval delay in seconds to refresh the lists
 #  Default: 3600
 # c.LabServerApp.listings_refresh_seconds = 3600
@@ -206,6 +231,10 @@
 #  described on https://2.python-requests.org/en/v2.7.0/api/#requests.request
 #  Default: {}
 # c.LabServerApp.listings_request_options = {}
+
+## The listings url.
+#  Default: ''
+# c.LabServerApp.listings_url = ''
 
 ## The date format used by logging formatters for %(asctime)s
 #  See also: Application.log_datefmt
@@ -221,11 +250,20 @@
 
 ## Whether to open in a browser after starting.
 #  See also: ExtensionApp.open_browser
-# c.LabServerApp.open_browser = True
+# c.LabServerApp.open_browser = False
+
+## The optional location of the settings schemas directory. If given, a handler
+#  will be added for settings.
+#  Default: ''
+# c.LabServerApp.schemas_dir = ''
 
 ## Settings that will passed to the server.
 #  See also: ExtensionApp.settings
 # c.LabServerApp.settings = {}
+
+## The url path of the settings handler.
+#  Default: ''
+# c.LabServerApp.settings_url = ''
 
 ## Instead of starting the Application, dump configuration to stdout
 #  See also: Application.show_config
@@ -234,6 +272,11 @@
 ## Instead of starting the Application, dump configuration to stdout (as JSON)
 #  See also: Application.show_config_json
 # c.LabServerApp.show_config_json = False
+
+## The optional location of local static files. If given, a static file handler
+#  will be added.
+#  Default: ''
+# c.LabServerApp.static_dir = ''
 
 ## paths to search for serving static files.
 #  See also: ExtensionApp.static_paths
@@ -247,9 +290,43 @@
 #  See also: ExtensionApp.template_paths
 # c.LabServerApp.template_paths = []
 
-## A list of comma-separated URIs to get the whitelist
+## The application templates directory.
+#  Default: ''
+# c.LabServerApp.templates_dir = ''
+
+## The optional location of the themes directory. If given, a handler will be
+#  added for themes.
+#  Default: ''
+# c.LabServerApp.themes_dir = ''
+
+## The theme url.
+#  Default: ''
+# c.LabServerApp.themes_url = ''
+
+## The url path of the translations handler.
+#  Default: ''
+# c.LabServerApp.translations_api_url = ''
+
+## The url path of the tree handler.
+#  Default: ''
+# c.LabServerApp.tree_url = ''
+
+## The optional location of the user settings directory.
+#  Default: ''
+# c.LabServerApp.user_settings_dir = ''
+
+## Deprecated, use `LabServerApp.allowed_extensions_uris`
 #  Default: ''
 # c.LabServerApp.whitelist_uris = ''
+
+## The url path of the workspaces API.
+#  Default: ''
+# c.LabServerApp.workspaces_api_url = ''
+
+## The optional location of the saved workspaces directory. If given, a handler
+#  will be added for workspaces.
+#  Default: ''
+# c.LabServerApp.workspaces_dir = ''
 
 #------------------------------------------------------------------------------
 # LabApp(LabServerApp) configuration
@@ -266,6 +343,14 @@
 #  Default: None
 # c.LabApp.app_dir = None
 
+## The application settings directory.
+#  Default: ''
+# c.LabApp.app_settings_dir = ''
+
+## The url path for the application.
+#  Default: '/lab'
+# c.LabApp.app_url = '/lab'
+
 ## Deprecated, use `LabServerApp.blocked_extensions_uris`
 #  See also: LabServerApp.blacklist_uris
 # c.LabApp.blacklist_uris = ''
@@ -273,6 +358,11 @@
 ## 
 #  See also: LabServerApp.blocked_extensions_uris
 # c.LabApp.blocked_extensions_uris = ''
+
+## Whether to cache files on the server. This should be `True` except in dev
+#  mode.
+#  Default: True
+# c.LabApp.cache_files = True
 
 ## Full path of a config file.
 #  See also: JupyterApp.config_file
@@ -313,6 +403,10 @@
 #  Default: False
 # c.LabApp.extensions_in_dev_mode = False
 
+## Extra paths to look for federated JupyterLab extensions
+#  Default: []
+# c.LabApp.extra_labextensions_path = []
+
 ## Generate default config file.
 #  See also: JupyterApp.generate_config
 # c.LabApp.generate_config = False
@@ -325,6 +419,14 @@
 #  Default: {}
 # c.LabApp.jinja2_options = {}
 
+## The standard paths to look in for federated JupyterLab extensions
+#  Default: []
+# c.LabApp.labextensions_path = []
+
+## The url for federated JupyterLab extensions
+#  Default: ''
+# c.LabApp.labextensions_url = ''
+
 ## The interval delay in seconds to refresh the lists
 #  See also: LabServerApp.listings_refresh_seconds
 # c.LabApp.listings_refresh_seconds = 3600
@@ -333,6 +435,10 @@
 #  described on https://2.python-requests.org/en/v2.7.0/api/#requests.request
 #  See also: LabServerApp.listings_request_options
 # c.LabApp.listings_request_options = {}
+
+## The listings url.
+#  Default: ''
+# c.LabApp.listings_url = ''
 
 ## The date format used by logging formatters for %(asctime)s
 #  See also: Application.log_datefmt
@@ -347,8 +453,8 @@
 # c.LabApp.log_level = 30
 
 ## Whether to open in a browser after starting.
-#  See also: ExtensionApp.open_browser
-# c.LabApp.open_browser = True
+ # See also: ExtensionApp.open_browser
+# c.LabApp.open_browser = False
 
 ## The override url for static lab assets, typically a CDN.
 #  Default: ''
@@ -358,9 +464,18 @@
 #  Default: ''
 # c.LabApp.override_theme_url = ''
 
+## The optional location of the settings schemas directory. If given, a handler
+#  will be added for settings.
+#  Default: ''
+# c.LabApp.schemas_dir = ''
+
 ## Settings that will passed to the server.
 #  See also: ExtensionApp.settings
 # c.LabApp.settings = {}
+
+## The url path of the settings handler.
+#  Default: ''
+# c.LabApp.settings_url = ''
 
 ## Instead of starting the Application, dump configuration to stdout
 #  See also: Application.show_config
@@ -369,6 +484,11 @@
 ## Instead of starting the Application, dump configuration to stdout (as JSON)
 #  See also: Application.show_config_json
 # c.LabApp.show_config_json = False
+
+## The optional location of local static files. If given, a static file handler
+#  will be added.
+#  Default: ''
+# c.LabApp.static_dir = ''
 
 ## paths to search for serving static files.
 #  See also: ExtensionApp.static_paths
@@ -382,21 +502,46 @@
 #  See also: ExtensionApp.template_paths
 # c.LabApp.template_paths = []
 
+## The application templates directory.
+#  Default: ''
+# c.LabApp.templates_dir = ''
+
+## The optional location of the themes directory. If given, a handler will be
+#  added for themes.
+#  Default: ''
+# c.LabApp.themes_dir = ''
+
+## The theme url.
+#  Default: ''
+# c.LabApp.themes_url = ''
+
+## The url path of the translations handler.
+#  Default: ''
+# c.LabApp.translations_api_url = ''
+
+## The url path of the tree handler.
+#  Default: ''
+# c.LabApp.tree_url = ''
+
 ## The directory for user settings.
-#  Default: '/mnt/c/Users/medhu/.jupyter/lab/user-settings'
-# c.LabApp.user_settings_dir = '/mnt/c/Users/medhu/.jupyter/lab/user-settings'
+#  Default: '/home/fmind/.jupyter/lab/user-settings'
+# c.LabApp.user_settings_dir = '/home/fmind/.jupyter/lab/user-settings'
 
 ## Whether to serve the app in watch mode
 #  Default: False
 # c.LabApp.watch = False
 
-## A list of comma-separated URIs to get the whitelist
+## Deprecated, use `LabServerApp.allowed_extensions_uris`
 #  See also: LabServerApp.whitelist_uris
 # c.LabApp.whitelist_uris = ''
 
+## The url path of the workspaces API.
+#  Default: ''
+# c.LabApp.workspaces_api_url = ''
+
 ## The directory for workspaces
-#  Default: '/mnt/c/Users/medhu/.jupyter/lab/workspaces'
-# c.LabApp.workspaces_dir = '/mnt/c/Users/medhu/.jupyter/lab/workspaces'
+#  Default: '/home/fmind/.jupyter/lab/workspaces'
+# c.LabApp.workspaces_dir = '/home/fmind/.jupyter/lab/workspaces'
 
 #------------------------------------------------------------------------------
 # ServerApp(JupyterApp) configuration
@@ -571,8 +716,13 @@
 #  Default: []
 # c.ServerApp.extra_template_paths = []
 
+## Open the named file when the application is launched.
 #  Default: ''
 # c.ServerApp.file_to_run = ''
+
+## The URL prefix where files are opened directly.
+#  Default: 'notebooks'
+# c.ServerApp.file_url_prefix = 'notebooks'
 
 ## Generate default config file.
 #  See also: JupyterApp.generate_config
@@ -682,7 +832,7 @@
 #  module, unless it is overridden using the --browser (ServerApp.browser)
 #  configuration option.
 #  Default: False
-# c.ServerApp.open_browser = False
+c.ServerApp.open_browser = False
 
 ## Hashed password to use for web authentication.
 #  
@@ -703,11 +853,12 @@
 #  Default: False
 # c.ServerApp.password_required = False
 
-## The port the Jupyter server will listen on.
+## The port the server will listen on (env: JUPYTER_PORT).
 #  Default: 8888
 # c.ServerApp.port = 8888
 
-## The number of additional ports to try if the specified port is not available.
+## The number of additional ports to try if the specified port is not available
+#  (env: JUPYTER_PORT_RETRIES).
 #  Default: 50
 # c.ServerApp.port_retries = 50
 
@@ -772,6 +923,9 @@
 # c.ServerApp.terminals_enabled = True
 
 ## Token used for authenticating first-time connections to the server.
+#  
+#  The token can be read from the file referenced by JUPYTER_TOKEN_FILE or set
+#  directly with the JUPYTER_TOKEN environment variable.
 #  
 #  When no password is enabled, the default is to generate a new, random token.
 #  

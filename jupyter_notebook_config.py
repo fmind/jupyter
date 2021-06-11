@@ -127,6 +127,10 @@
 #  See also: JupyterApp.answer_yes
 # c.NotebookApp.answer_yes = False
 
+## " Require authentication to access prometheus metrics.
+#  Default: True
+# c.NotebookApp.authenticate_prometheus = True
+
 ## Reload the webapp when changes are made to any Python src files.
 #  Default: False
 # c.NotebookApp.autoreload = False
@@ -324,6 +328,12 @@
 #  See also: Application.log_format
 # c.NotebookApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
 
+## Set to True to enable JSON formatted logs. Run "pip install notebook[json-
+#  logging]" to install the required dependent packages. Can also be set using
+#  the environment variable JUPYTER_ENABLE_JSON_LOGGING=true.
+#  Default: False
+# c.NotebookApp.log_json = False
+
 ## Set the log level by value or name.
 #  See also: Application.log_level
 # c.NotebookApp.log_level = 30
@@ -379,7 +389,7 @@
 #  module, unless it is overridden using the --browser (NotebookApp.browser)
 #  configuration option.
 #  Default: True
-# c.NotebookApp.open_browser = True
+c.NotebookApp.open_browser = True
 
 ## Hashed password to use for web authentication.
 #  
@@ -642,7 +652,12 @@
 #  See also: ConnectionFileMixin.shell_port
 # c.KernelManager.shell_port = 0
 
-## Time to wait for a kernel to terminate before killing it, in seconds.
+## Time to wait for a kernel to terminate before killing it, in seconds. When a
+#  shutdown request is initiated, the kernel will be immediately send and
+#  interrupt (SIGINT), followedby a shutdown_request message, after 1/2 of
+#  `shutdown_wait_time`it will be sent a terminate (SIGTERM) request, and finally
+#  at the end of `shutdown_wait_time` will be killed (SIGKILL). terminate and
+#  kill may be equivalent on windows.
 #  Default: 5.0
 # c.KernelManager.shutdown_wait_time = 5.0
 
@@ -958,7 +973,7 @@
 #  Note ---- Classes using this mixin must provide the following attributes:
 #  
 #  root_dir : unicode
-#      A directory against against which API-style paths are to be resolved.
+#      A directory against which API-style paths are to be resolved.
 #  
 #  log : logging.Logger
 
@@ -1055,9 +1070,13 @@
 ## A class for computing and verifying notebook signatures.
 
 ## The hashing algorithm used to sign notebooks.
-#  Choices: any of ['sha1', 'sha224', 'sha512', 'blake2b', 'sha3_512', 'blake2s', 'sha3_256', 'sha256', 'md5', 'sha3_384', 'sha3_224', 'sha384']
+#  Choices: any of ['sha512', 'sha1', 'sha3_512', 'sha3_256', 'md5', 'blake2s', 'sha3_384', 'sha3_224', 'sha384', 'sha256', 'blake2b', 'sha224']
 #  Default: 'sha256'
 # c.NotebookNotary.algorithm = 'sha256'
+
+## The storage directory for notary secret and database.
+#  Default: ''
+# c.NotebookNotary.data_dir = ''
 
 ## The sqlite file in which to store notebook signatures. By default, this will
 #  be in your Jupyter data directory. You can set it to ':memory:' to disable
@@ -1079,7 +1098,72 @@
 # c.NotebookNotary.store_factory = traitlets.Undefined
 
 #------------------------------------------------------------------------------
-# GatewayKernelManager(MappingKernelManager) configuration
+# AsyncMultiKernelManager(MultiKernelManager) configuration
+#------------------------------------------------------------------------------
+## The name of the default kernel to start
+#  See also: MultiKernelManager.default_kernel_name
+# c.AsyncMultiKernelManager.default_kernel_name = 'python3'
+
+## The kernel manager class.  This is configurable to allow subclassing of the
+#  AsyncKernelManager for customized behavior.
+#  Default: 'jupyter_client.ioloop.AsyncIOLoopKernelManager'
+# c.AsyncMultiKernelManager.kernel_manager_class = 'jupyter_client.ioloop.AsyncIOLoopKernelManager'
+
+## Share a single zmq.Context to talk to all my kernels
+#  See also: MultiKernelManager.shared_context
+# c.AsyncMultiKernelManager.shared_context = True
+
+#------------------------------------------------------------------------------
+# AsyncMappingKernelManager(MappingKernelManager, AsyncMultiKernelManager) configuration
+#------------------------------------------------------------------------------
+## White list of allowed kernel message types.
+#  See also: MappingKernelManager.allowed_message_types
+# c.AsyncMappingKernelManager.allowed_message_types = []
+
+## Whether messages from kernels whose frontends have disconnected should be
+#  buffered in-memory.
+#  See also: MappingKernelManager.buffer_offline_messages
+# c.AsyncMappingKernelManager.buffer_offline_messages = True
+
+## Whether to consider culling kernels which are busy.
+#  See also: MappingKernelManager.cull_busy
+# c.AsyncMappingKernelManager.cull_busy = False
+
+## Whether to consider culling kernels which have one or more connections.
+#  See also: MappingKernelManager.cull_connected
+# c.AsyncMappingKernelManager.cull_connected = False
+
+## Timeout (in seconds) after which a kernel is considered idle and ready to be
+#  culled.
+#  See also: MappingKernelManager.cull_idle_timeout
+# c.AsyncMappingKernelManager.cull_idle_timeout = 0
+
+## The interval (in seconds) on which to check for idle kernels exceeding the
+#  cull timeout value.
+#  See also: MappingKernelManager.cull_interval
+# c.AsyncMappingKernelManager.cull_interval = 300
+
+## The name of the default kernel to start
+#  See also: MultiKernelManager.default_kernel_name
+# c.AsyncMappingKernelManager.default_kernel_name = 'python3'
+
+## Timeout for giving up on a kernel (in seconds).
+#  See also: MappingKernelManager.kernel_info_timeout
+# c.AsyncMappingKernelManager.kernel_info_timeout = 60
+
+## The kernel manager class.  This is configurable to allow
+#  See also: AsyncMultiKernelManager.kernel_manager_class
+# c.AsyncMappingKernelManager.kernel_manager_class = 'jupyter_client.ioloop.AsyncIOLoopKernelManager'
+
+#  See also: MappingKernelManager.root_dir
+# c.AsyncMappingKernelManager.root_dir = ''
+
+## Share a single zmq.Context to talk to all my kernels
+#  See also: MultiKernelManager.shared_context
+# c.AsyncMappingKernelManager.shared_context = True
+
+#------------------------------------------------------------------------------
+# GatewayKernelManager(AsyncMappingKernelManager) configuration
 #------------------------------------------------------------------------------
 ## Kernel manager that supports remote kernels hosted by Jupyter Kernel or
 #  Enterprise Gateway.
@@ -1120,8 +1204,8 @@
 # c.GatewayKernelManager.kernel_info_timeout = 60
 
 ## The kernel manager class.  This is configurable to allow
-#  See also: MultiKernelManager.kernel_manager_class
-# c.GatewayKernelManager.kernel_manager_class = 'jupyter_client.ioloop.IOLoopKernelManager'
+#  See also: AsyncMultiKernelManager.kernel_manager_class
+# c.GatewayKernelManager.kernel_manager_class = 'jupyter_client.ioloop.AsyncIOLoopKernelManager'
 
 #  See also: MappingKernelManager.root_dir
 # c.GatewayKernelManager.root_dir = ''
@@ -1149,8 +1233,8 @@
 # GatewayClient(SingletonConfigurable) configuration
 #------------------------------------------------------------------------------
 ## This class manages the configuration.  It's its own singleton class so that we
-#  can share these values across all objects.  It also contains some helper methods
-#   to build request arguments out of the various config options.
+#  can share these values across all objects.  It also contains some helper
+#  methods to build request arguments out of the various config options.
 
 ## The authorization token used in the HTTP headers.  (JUPYTER_GATEWAY_AUTH_TOKEN
 #  env var)
@@ -1183,6 +1267,23 @@
 #  available to the kernel. (JUPYTER_GATEWAY_ENV_WHITELIST env var)
 #  Default: ''
 # c.GatewayClient.env_whitelist = ''
+
+## The time allowed for HTTP reconnection with the Gateway server for the first
+#  time. Next will be JUPYTER_GATEWAY_RETRY_INTERVAL multiplied by two in factor
+#  of numbers of retries but less than JUPYTER_GATEWAY_RETRY_INTERVAL_MAX.
+#  (JUPYTER_GATEWAY_RETRY_INTERVAL env var)
+#  Default: 1.0
+# c.GatewayClient.gateway_retry_interval = 1.0
+
+## The maximum time allowed for HTTP reconnection retry with the Gateway server.
+#  (JUPYTER_GATEWAY_RETRY_INTERVAL_MAX env var)
+#  Default: 30.0
+# c.GatewayClient.gateway_retry_interval_max = 30.0
+
+## The maximum retries allowed for HTTP reconnection with the Gateway server.
+#  (JUPYTER_GATEWAY_RETRY_MAX env var)
+#  Default: 5
+# c.GatewayClient.gateway_retry_max = 5
 
 ## Additional HTTP headers to pass on the request.  This value will be converted
 #  to a dict. (JUPYTER_GATEWAY_HEADERS env var)
